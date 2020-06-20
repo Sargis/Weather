@@ -45,6 +45,8 @@ protocol CityInteractorInputProtocol: class {
 protocol CityViewProtocol: class {
 
     var presenter: CityPresenterProtocol?  { get set }
+    func presentError(_ error: Error)
+    func updateData()
 
     /* Presenter -> ViewController */
 }

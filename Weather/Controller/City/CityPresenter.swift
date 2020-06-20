@@ -35,10 +35,11 @@ class CityPresenter: CityPresenterProtocol {
 extension CityPresenter: CityInteractorOutputProtocol {
     
     func receivedError(_ error: Error) {
-        
+        self.view?.presentError(error)
     }
     
     func receivedWeather(_ weather: Weather) {
         self.weather = weather
+        self.view?.updateData()
     }
 }

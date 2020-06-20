@@ -23,6 +23,11 @@
 		F124C378249E99CA009A0568 /* HeaderPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C377249E99CA009A0568 /* HeaderPagingView.swift */; };
 		F124C37D249E9FE6009A0568 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */; };
 		F124C389249EA4F2009A0568 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C388249EA4F2009A0568 /* Weather.swift */; };
+		F124C38C249EB01F009A0568 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C38B249EB01F009A0568 /* UIViewControllerExtension.swift */; };
+		F124C390249EB2F4009A0568 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C38E249EB2F4009A0568 /* WeatherTableViewCell.swift */; };
+		F124C391249EB2F4009A0568 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F124C38F249EB2F4009A0568 /* WeatherTableViewCell.xib */; };
+		F124C393249EB32F009A0568 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C392249EB32F009A0568 /* UITableViewExtension.swift */; };
+		F124C395249EB352009A0568 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C394249EB352009A0568 /* NSObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		F124C377249E99CA009A0568 /* HeaderPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPagingView.swift; sourceTree = "<group>"; };
 		F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F124C388249EA4F2009A0568 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		F124C38B249EB01F009A0568 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F124C38E249EB2F4009A0568 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		F124C38F249EB2F4009A0568 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		F124C392249EB32F009A0568 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		F124C394249EB352009A0568 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		F124C351249E91BE009A0568 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F124C38A249EB00A009A0568 /* Extension */,
 				F124C37B249E9FBA009A0568 /* Utility */,
 				F124C376249E99C0009A0568 /* View */,
 				F124C373249E9701009A0568 /* Entity */,
@@ -141,6 +152,7 @@
 		F124C379249E9D84009A0568 /* City */ = {
 			isa = PBXGroup;
 			children = (
+				F124C38D249EB2DC009A0568 /* Cell */,
 				F124C367249E96DA009A0568 /* CityPresenter.swift */,
 				F124C368249E96DA009A0568 /* CityRouter.swift */,
 				F124C369249E96DA009A0568 /* CityViewController.swift */,
@@ -164,6 +176,25 @@
 				F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F124C38A249EB00A009A0568 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F124C38B249EB01F009A0568 /* UIViewControllerExtension.swift */,
+				F124C392249EB32F009A0568 /* UITableViewExtension.swift */,
+				F124C394249EB352009A0568 /* NSObjectExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F124C38D249EB2DC009A0568 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F124C38E249EB2F4009A0568 /* WeatherTableViewCell.swift */,
+				F124C38F249EB2F4009A0568 /* WeatherTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F124C391249EB2F4009A0568 /* WeatherTableViewCell.xib in Resources */,
 				F124C35F249E91C0009A0568 /* LaunchScreen.storyboard in Resources */,
 				F124C35C249E91C0009A0568 /* Assets.xcassets in Resources */,
 				F124C35A249E91BE009A0568 /* Main.storyboard in Resources */,
@@ -283,13 +315,17 @@
 			files = (
 				F124C370249E96DA009A0568 /* CityProtocols.swift in Sources */,
 				F124C357249E91BE009A0568 /* TabViewController.swift in Sources */,
+				F124C390249EB2F4009A0568 /* WeatherTableViewCell.swift in Sources */,
 				F124C375249E9713009A0568 /* City.swift in Sources */,
 				F124C37D249E9FE6009A0568 /* SwiftyJSON.swift in Sources */,
 				F124C389249EA4F2009A0568 /* Weather.swift in Sources */,
+				F124C393249EB32F009A0568 /* UITableViewExtension.swift in Sources */,
+				F124C395249EB352009A0568 /* NSObjectExtension.swift in Sources */,
 				F124C378249E99CA009A0568 /* HeaderPagingView.swift in Sources */,
 				F124C353249E91BE009A0568 /* AppDelegate.swift in Sources */,
 				F124C371249E96DA009A0568 /* CityInteractor.swift in Sources */,
 				F124C36E249E96DA009A0568 /* CityRouter.swift in Sources */,
+				F124C38C249EB01F009A0568 /* UIViewControllerExtension.swift in Sources */,
 				F124C355249E91BE009A0568 /* SceneDelegate.swift in Sources */,
 				F124C36D249E96DA009A0568 /* CityPresenter.swift in Sources */,
 				F124C36F249E96DA009A0568 /* CityViewController.swift in Sources */,
