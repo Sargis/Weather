@@ -8,6 +8,7 @@ Use the cocoa pods
 
 ```bash
 pod install
+pod update
 ```
 
 ## Contributing
