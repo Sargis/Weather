@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		F124C371249E96DA009A0568 /* CityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C36B249E96DA009A0568 /* CityInteractor.swift */; };
 		F124C375249E9713009A0568 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C374249E9713009A0568 /* City.swift */; };
 		F124C378249E99CA009A0568 /* HeaderPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C377249E99CA009A0568 /* HeaderPagingView.swift */; };
+		F124C37D249E9FE6009A0568 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */; };
+		F124C389249EA4F2009A0568 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124C388249EA4F2009A0568 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F124C36B249E96DA009A0568 /* CityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInteractor.swift; sourceTree = "<group>"; };
 		F124C374249E9713009A0568 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		F124C377249E99CA009A0568 /* HeaderPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPagingView.swift; sourceTree = "<group>"; };
+		F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F124C388249EA4F2009A0568 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		F124C351249E91BE009A0568 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F124C37B249E9FBA009A0568 /* Utility */,
 				F124C376249E99C0009A0568 /* View */,
 				F124C373249E9701009A0568 /* Entity */,
 				F124C366249E96C9009A0568 /* Controller */,
@@ -110,8 +115,8 @@
 		F124C366249E96C9009A0568 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F124C37A249E9D92009A0568 /* Tab */,
 				F124C379249E9D84009A0568 /* City */,
+				F124C37A249E9D92009A0568 /* Tab */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F124C374249E9713009A0568 /* City.swift */,
+				F124C388249EA4F2009A0568 /* Weather.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -152,6 +158,14 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		F124C37B249E9FBA009A0568 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F124C37C249E9FE6009A0568 /* SwiftyJSON.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +177,7 @@
 				F124C34B249E91BD009A0568 /* Sources */,
 				F124C34C249E91BD009A0568 /* Frameworks */,
 				F124C34D249E91BD009A0568 /* Resources */,
+				A7933852BF84A59123BE1751 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +257,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A7933852BF84A59123BE1751 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,6 +284,8 @@
 				F124C370249E96DA009A0568 /* CityProtocols.swift in Sources */,
 				F124C357249E91BE009A0568 /* TabViewController.swift in Sources */,
 				F124C375249E9713009A0568 /* City.swift in Sources */,
+				F124C37D249E9FE6009A0568 /* SwiftyJSON.swift in Sources */,
+				F124C389249EA4F2009A0568 /* Weather.swift in Sources */,
 				F124C378249E99CA009A0568 /* HeaderPagingView.swift in Sources */,
 				F124C353249E91BE009A0568 /* AppDelegate.swift in Sources */,
 				F124C371249E96DA009A0568 /* CityInteractor.swift in Sources */,

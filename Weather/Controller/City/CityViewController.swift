@@ -8,14 +8,18 @@
 
 
 import UIKit
-import PullToRefresh
+import ESPullToRefresh
 
 class CityViewController: UITableViewController, CityViewProtocol {
 
 	var presenter: CityPresenterProtocol?
-
+ 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.es.addPullToRefresh { 
+            self.presenter?.getWeather()
+        }
+        self.tableView.es.startPullToRefresh()
     }
 
 }
